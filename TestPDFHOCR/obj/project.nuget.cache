@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "O+KJNfjKy6e2T6q2E1OCLf5VHUqSCFLVftwu78EJYm6Lprw66JN2YgWcjG2O4uWg5QdqE7YhXhmvb+gGNnkTcw==",
+  "success": true,
+  "projectFilePath": "/home/tigra/RiderProjects/TestPDFHOCR/TestPDFHOCR/TestPDFHOCR.csproj",
+  "expectedPackageFiles": [
+    "/home/tigra/.nuget/packages/aspose.pdf.drawing/23.10.1/aspose.pdf.drawing.23.10.1.nupkg.sha512",
+    "/home/tigra/.nuget/packages/microsoft.extensions.dependencymodel/7.0.0/microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/microsoft.win32.systemevents/7.0.0/microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.configuration.configurationmanager/4.5.0/system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.diagnostics.diagnosticsource/7.0.0/system.diagnostics.diagnosticsource.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.diagnostics.performancecounter/4.5.0/system.diagnostics.performancecounter.4.5.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.drawing.common/7.0.0/system.drawing.common.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.formats.asn1/7.0.0/system.formats.asn1.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.security.cryptography.pkcs/7.0.0/system.security.cryptography.pkcs.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.security.cryptography.protecteddata/4.5.0/system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.security.permissions/4.5.0/system.security.permissions.4.5.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.text.encoding.codepages/7.0.0/system.text.encoding.codepages.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
+    "/home/tigra/.nuget/packages/tesseract-ocr/1.0.4/tesseract-ocr.1.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
