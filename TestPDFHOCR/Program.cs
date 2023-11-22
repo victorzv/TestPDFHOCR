@@ -52,6 +52,7 @@ class Program
         };
         
         bool result = pdfDocument.Convert(recognizeText);
+        pdfDocument.Save("/home/tigra/MD_TEST_PDF.pdf");
         Console.WriteLine(result);
         //pdfDocument.Save();
     }
