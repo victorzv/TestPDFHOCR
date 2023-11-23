@@ -1,4 +1,5 @@
 ﻿using Aspose.Pdf;
+using Aspose.Pdf.Text;
 
 class Program
 {
@@ -52,8 +53,39 @@ class Program
         };
         
         bool result = pdfDocument.Convert(recognizeText);
-        pdfDocument.Save("/home/tigra/MD_TEST_PDF.pdf");
+        
         Console.WriteLine(result);
+        
+        //Console.WriteLine(pdfDocument.Pages[1].Resources.Images.Count);
+        
+        //pdfDocument.Pages[1].Resources.Images.Delete(1);
+        
+        ParagraphAbsorber absorb = new ParagraphAbsorber();
+        absorb.Visit(pdfDocument);
+
+        var pdfNewDoc = new Document();
+        Page page = pdfNewDoc.Pages.Add();
+        
+        foreach (PageMarkup markup in absorb.PageMarkups)
+        {
+            foreach (MarkupSection section in markup.Sections)
+            {
+                foreach (MarkupParagraph paragraph in section.Paragraphs)
+                {
+                    foreach (List<TextFragment> line in paragraph.Lines)
+                    {
+                        foreach (TextFragment textFragment in line)
+                        {
+                            page.Paragraphs.Add(textFragment);
+                        }
+                    }
+                }
+            }
+        }
+
+        pdfNewDoc.Save("/home/tigra/MD_TEST_NEW.pdf");
+        
+        pdfDocument.Save("/home/tigra/MD_TEST_PDF.pdf");
         //pdfDocument.Save();
     }
 }
