@@ -58,8 +58,8 @@ class Program
         
         //Console.WriteLine(pdfDocument.Pages[1].Resources.Images.Count);
         
-        //pdfDocument.Pages[1].Resources.Images.Delete(1);
-        
+        pdfDocument.Pages[1].Resources.Images.Delete(1);
+        /*
         ParagraphAbsorber absorb = new ParagraphAbsorber();
         absorb.Visit(pdfDocument);
 
@@ -76,16 +76,19 @@ class Program
                     {
                         foreach (TextFragment textFragment in line)
                         {
+                            textFragment.TextState.ForegroundColor =
+                                Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Green);
+                            textFragment.TextState.BackgroundColor =
+                                Aspose.Pdf.Color.FromRgb(System.Drawing.Color.White);
                             page.Paragraphs.Add(textFragment);
                         }
                     }
                 }
             }
-        }
+        }                
 
-        pdfNewDoc.Save("/home/tigra/MD_TEST_NEW.pdf");
+        pdfNewDoc.Save("/home/tigra/MD_TEST_NEW.pdf");*/
         
         pdfDocument.Save("/home/tigra/MD_TEST_PDF.pdf");
-        //pdfDocument.Save();
     }
 }
