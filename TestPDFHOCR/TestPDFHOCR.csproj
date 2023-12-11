@@ -12,4 +12,10 @@
       <PackageReference Include="Tesseract-OCR" Version="1.0.4" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="MD_TEST.pdf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

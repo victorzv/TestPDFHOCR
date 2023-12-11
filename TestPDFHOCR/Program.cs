@@ -1,15 +1,14 @@
 ﻿using Aspose.Pdf;
 using Aspose.Pdf.Text;
+using TestPDFHOCR;
 
 class Program
 {
     static void Main(string[] args)
     {
-        //new License().SetLicense("./test.lic");
-        new License().SetLicense("/home/tigra/test.lic");
-
-        //var pdfDocument = new Document("./test.pdf");
-        var pdfDocument = new Document("/home/tigra/MD_TEST.pdf");
+        new License().SetLicense("./test.lic");
+        
+        var pdfDocument = new Document("./MD_TEST.pdf");
 
         Document.CallBackGetHocr recognizeText = (Aspose.Pdf.Drawing.PdfImage img) =>
         {
@@ -41,37 +40,15 @@ class Program
         };
 
         bool result = pdfDocument.Convert(recognizeText);
-        //var page = pdfDocument.Pages[1];
-        //page.Resources.Images.Replace(1, File.OpenRead("./blank.png"));
+
         pdfDocument.Save("./searchable_test.pdf");
         pdfDocument.Dispose();
 
         var doc2 = new Document("./searchable_test.pdf");
         doc2.Pages[1].Resources.Images.Delete(1);
-        
-        ParagraphAbsorber absorb = new ParagraphAbsorber();
-        absorb.Visit(doc2);
 
-        foreach (PageMarkup markup in absorb.PageMarkups)
-        {
-            foreach (MarkupSection section in markup.Sections)
-            {
-                foreach (MarkupParagraph paragraph in section.Paragraphs)
-                {
-                    foreach (List<TextFragment> line in paragraph.Lines)
-                    {
-                        foreach (TextFragment textFragment in line)
-                        {
-                            textFragment.TextState.ForegroundColor =
-                                Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
-                        }
-                    }
-                }
-            }
-        }
+        TextColorChanger.SetColor(doc2);
 
         doc2.Save("./searchable_test.pdf");
-        //pdfNewDoc.Save("/home/tigra/MD_TEST_NEW.pdf");
-
     }
 }
