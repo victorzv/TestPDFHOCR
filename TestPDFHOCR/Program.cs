@@ -5,9 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        new License().SetLicense("./test.lic");
+        //new License().SetLicense("./test.lic");
+        new License().SetLicense("/home/tigra/test.lic");
 
-        var pdfDocument = new Document("./test.pdf");
+        //var pdfDocument = new Document("./test.pdf");
+        var pdfDocument = new Document("/home/tigra/MD_TEST.pdf");
 
         Document.CallBackGetHocr recognizeText = (Aspose.Pdf.Drawing.PdfImage img) =>
         {
@@ -46,18 +48,9 @@ class Program
 
         var doc2 = new Document("./searchable_test.pdf");
         doc2.Pages[1].Resources.Images.Delete(1);
-        doc2.Save("./searchable_test.pdf");
-
-
-        //Console.WriteLine(pdfDocument.Pages[1].Resources.Images.Count);
-
-        //pdfDocument.Pages[1].Resources.Images.Delete(1);
-        /*
+        
         ParagraphAbsorber absorb = new ParagraphAbsorber();
-        absorb.Visit(pdfDocument);
-
-        var pdfNewDoc = new Document();
-        Page page = pdfNewDoc.Pages.Add();
+        absorb.Visit(doc2);
 
         foreach (PageMarkup markup in absorb.PageMarkups)
         {
@@ -70,17 +63,15 @@ class Program
                         foreach (TextFragment textFragment in line)
                         {
                             textFragment.TextState.ForegroundColor =
-                                Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Green);
-                            textFragment.TextState.BackgroundColor =
-                                Aspose.Pdf.Color.FromRgb(System.Drawing.Color.White);
-                            page.Paragraphs.Add(textFragment);
+                                Aspose.Pdf.Color.FromRgb(System.Drawing.Color.Black);
                         }
                     }
                 }
             }
         }
 
-        pdfNewDoc.Save("/home/tigra/MD_TEST_NEW.pdf");*/
+        doc2.Save("./searchable_test.pdf");
+        //pdfNewDoc.Save("/home/tigra/MD_TEST_NEW.pdf");
 
     }
 }
